@@ -6,7 +6,7 @@ import VenganPues from '../../assets/iconoVenganPues.png'
 const NavBar = () => {
     return (
         <Navbar className='NavBar-Container g-lg-5' expand='md'>
-            <Navbar.Brand href="#home"><img className='custom-navbar' src={VenganPues} alt="VenganPues" ></img> <span className='tiltuloVenganPues'>Vengan Pues</span> </Navbar.Brand>
+            <Navbar.Brand href="#home"><img className='custom-navbar' src={VenganPues} alt="VenganPues" ></img> <span className='tiltuloVenganPues'>Vengan Pues...</span> </Navbar.Brand>
             <Navbar.Toggle>
                 <span className='navbar-toggler-icon'></span>
             </Navbar.Toggle>

@@ -14,12 +14,14 @@
 
 .tiltuloVenganPues {
     font-family: 'Caveat', cursive;
-    font-family: 'Covered By Your Grace', cursive;
+    /* font-family: 'Covered By Your Grace', cursive; */
     color: rgb(236, 188, 57);
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 30px;
     line-height: 20px;
+    transform: rotate(-35deg);
+    /* El valor negativo indica la dirección de la rotación */
 }
 
 #basic-nav-dropdown {
