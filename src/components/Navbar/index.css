@@ -1,0 +1,31 @@
+.NavBar-Container {
+    /* background-color: rgb(212, 202, 155); */
+
+}
+
+.menu-letras {
+    color: rgb(124, 56, 14);
+}
+
+.custom-navbar {
+    height: 50px;
+    /* Cambia este valor por el que tenga tu Navbar */
+}
+
+.custom-navbar img {
+    height: 100%;
+    /* La imagen ocupará toda la altura del Navbar */
+}
+
+.tiltuloVenganPues {
+    font-family: 'Covered By Your Grace', cursive;
+    color: rgb(236, 188, 57);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 20px;
+}
+
+#basic-nav-dropdown {
+    color: rgb(124, 56, 14);
+}
