@@ -1,8 +1,3 @@
-.NavBar-Container {
-    /* background-color: rgb(212, 202, 155); */
-
-}
-
 .menu-letras {
     color: rgb(124, 56, 14);
 }
@@ -18,10 +13,11 @@
 }
 
 .tiltuloVenganPues {
+    font-family: 'Caveat', cursive;
     font-family: 'Covered By Your Grace', cursive;
     color: rgb(236, 188, 57);
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 30px;
     line-height: 20px;
 }
