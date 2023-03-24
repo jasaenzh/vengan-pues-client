@@ -1,5 +1,6 @@
 export const AUMENTAR_CONTADOR = "AUMENTAR_CONTADOR";
 export const GET_APARTAMENTOS = "GET_APARTAMENTOS"
+export const CLEAN_APARTAMENTOS = "CLEAN_APARTAMENTOS"
 
 export const aumentarContador = () => {
     return { type: AUMENTAR_CONTADOR };
@@ -7,11 +8,18 @@ export const aumentarContador = () => {
 
 export const getApartamentos = () => {
     return function (dispatch) {
-        fetch("https://jsonplaceholder.typicode.com/users")
-            .then((res) => res.json())
+        fetch("https://rickandmortyapi.com/api/character")
+            .then((response) => response.json())
             .then((data) => dispatch({
                 type: GET_APARTAMENTOS,
                 payload: data
             }))
+            .catch((error) => {
+                console.log(error);
+            });
     }
+}
+
+export const cleanApartamentos = () => {
+    return { type: CLEAN_APARTAMENTOS };
 }

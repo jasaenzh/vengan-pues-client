@@ -1,8 +1,7 @@
-import { AUMENTAR_CONTADOR, GET_APARTAMENTOS } from "./actions";
-
+import { AUMENTAR_CONTADOR, CLEAN_APARTAMENTOS, GET_APARTAMENTOS } from "./actions";
 
 const initialState = {
-    aparmatemtos: [],
+    apartamentos: [],
     apartamento: {},
     contador: 0,
 }
@@ -20,7 +19,13 @@ const reducer = (state = initialState, action) => {
         case GET_APARTAMENTOS:
             return {
                 ...state,
-                aparmatemtos: action.payload
+                apartamentos: action.payload.results
+            }
+
+        case CLEAN_APARTAMENTOS:
+            return {
+                ...state,
+                apartamentos: [],
             }
 
         default:
