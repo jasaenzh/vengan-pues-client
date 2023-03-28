@@ -13,7 +13,7 @@ const Home = () => {
                 <Cards />
             </div>
 
-            <footer className="bg-dark text-light py-3 fixed-bottom">
+            <footer className="bg-dark text-light py-3 ">
                 <div className="container text-center">
                     &copy; 2023 creado por Jhony Saenz
                 </div>
