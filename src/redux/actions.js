@@ -8,7 +8,7 @@ export const aumentarContador = () => {
 
 export const getApartamentos = () => {
     return function (dispatch) {
-        fetch("https://rickandmortyapi.com/api/character")
+        fetch("http://localhost:3001/api/apartamentos")
             .then((response) => response.json())
             .then((data) => dispatch({
                 type: GET_APARTAMENTOS,

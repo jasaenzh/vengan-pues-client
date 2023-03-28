@@ -1,50 +1,30 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { cleanApartamentos, getApartamentos } from '../../redux/actions'
-
-// Base de datos archivo
-import db from '../../db';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getApartamentos } from '../../redux/actions';
 
 const Card = () => {
-
     const dispatch = useDispatch();
-
-    const apartamentosProps = useSelector((state) => state.apartamentos)
+    const apartamentosProps = useSelector((state) => state.apartamentos);
 
     useEffect(() => {
         dispatch(getApartamentos());
-        return () => {
-            //dispatch que limpia el estado
-            dispatch(cleanApartamentos())
-        }
     }, [dispatch]);
 
-    console.log(apartamentosProps)
-
     return (
-        <div className='mt-5 bg-danger'>
-            {/* {apartamentosProps?.map((apartamento) => {
+        <div className='d-flex flex-wrap justify-content-between flex-column flex-sm-row m-3 w-100 bg-light text-center h-100'>
+            {apartamentosProps?.map((apartamento, index) => {
                 return (
-                    <p key={apartamento.id}>{apartamento.name}</p>
-                )
-            })} */}
-
-            {db.map((apartamento) => (
-                <div key={apartamento.numeroApartamento}>
-                    <h2>Apartamento {apartamento.numeroApartamento}</h2>
-                    <p>Ubicación: {apartamento.ubicacion}</p>
-                    <p>Área: {apartamento.areaMts} mts²</p>
-                    <p>Precio: {apartamento.precio} USD</p>
-                    <p>Habitaciones: {apartamento.habitaciones}</p>
-                    <p>Camas dobles: {apartamento.camasDobles}</p>
-                    <p>Camas sencillas: {apartamento.camasSencillas}</p>
-                    <p>Baños: {apartamento.banos}</p>
-                    {/* ... y así con el resto de los campos */}
-                </div>
-            ))}
-
+                    <div
+                        key={index}
+                        className='bg-info my-3 mx-auto'
+                        style={{ width: '48%' }}
+                    >
+                        <h1>{apartamento.numeroApartamento}</h1>
+                    </div>
+                );
+            })}
         </div>
-    )
-}
+    );
+};
 
-export default Card
+export default Card;
