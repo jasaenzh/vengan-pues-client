@@ -17,12 +17,6 @@ const Card = () => {
         <div className='container'>
             <div className='row'>
 
-                <div className="loader">
-                    <span className="loader__element"></span>
-                    <span className="loader__element"></span>
-                    <span className="loader__element"></span>
-                </div>
-
                 {apartamentosProps?.map((apartamento, index) => {
                     let habitacionesLabel = apartamento.habitaciones === 1 ? 'habitación' : 'habitaciones';
                     let camasDoblesLabel = apartamento.camasDobles === 1 ? 'cama doble' : 'camas dobles';
