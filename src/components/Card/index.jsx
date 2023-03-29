@@ -71,12 +71,13 @@ const Card = () => {
                             </span>
 
                             <span> {apartamento.banos} baño{apartamento.banos === 1 ? '' : 's'} {apartamento.aguaCaliente === true ? ` con agua caliente` : ``}</span>
-                            <span>, {apartamento.secadorCabello >= 1 ? `secador de cabello` : ``}</span>
+                            <span>{apartamento.secadorCabello >= 1 ? `, secador de cabello` : ``}</span>
+                            <span>{apartamento.salaEstar === true ? `, sala` : ``}</span>
+                            <span>{apartamento.comedor >= 1 ? `, comedor` : ``}</span>
 
 
                             {/* 
-                            
-                             secador de cabello, sala, comedor, sofá cama, televisor, internet, cocina equipada con nevera, lavadora, microondas, cafetera, licuadora, tostador de pan, olla presión, olla arrocera con vaporera, sandwichera, cámaras de seguridad en exteriores.
+                              comedor, sofá cama, televisor, internet, cocina equipada con nevera, lavadora, microondas, cafetera, licuadora, tostador de pan, olla presión, olla arrocera con vaporera, sandwichera, cámaras de seguridad en exteriores.
                             {apartamento.tipo === 'dúplex' && apartamento.ubicacion === 'cuarto' ? ' Terraza con vista panorámica.' : ''} */}
                         </p>
                     </div>
