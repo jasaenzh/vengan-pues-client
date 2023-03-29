@@ -4,7 +4,7 @@ import Cards from '../components/Cards';
 
 const Home = () => {
     return (
-        <div className="Home bg-info">
+        <div className="Home">
             <NavBar />
 
             <main className="container my-5">

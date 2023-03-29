@@ -2,7 +2,7 @@ import React from 'react'
 
 const Banner = () => {
     return (
-        <div>
+        <div className=' bg-info'>
             <p>
                 Quieres o necesitas viajar a Medellín, hospédate con nosotros...
             </p>

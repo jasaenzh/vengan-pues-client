@@ -5,7 +5,7 @@ import Banner from '../Banner';
 
 const Cards = () => {
     return (
-        <div className="d-flex flex-column mt-4 w-100 bg-black align-content-center ">
+        <div className="d-flex flex-column mt-4 w-100 align-content-center">
             <div className=" justify-content-center align-content-center bg-danger m-4">
                 <Banner />
             </div>
