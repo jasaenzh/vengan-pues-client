@@ -80,9 +80,12 @@ const Card = () => {
                             <span>{apartamento.cocina === true ? `, cocina equipada con` : ``}</span>
                             <span>{apartamento.nevera === true ? ` nevera` : ``}</span>
                             <span>{apartamento.lavadora === true ? `, lavadora` : ``}</span>
+                            <span>{apartamento.microondas === true ? `, microondas` : ``}</span>
+                            <span>{apartamento.cafetera === true ? `, cafetera` : ``}</span>
+                            <span>{apartamento.licuadora === true ? `, licuadora` : ``}</span>
 
                             {/* 
-                              , microondas, cafetera, licuadora, tostador de pan, olla presión, olla arrocera con vaporera, sandwichera, cámaras de seguridad en exteriores.
+                            , tostador de pan, olla presión, olla arrocera con vaporera, sandwichera, cámaras de seguridad en exteriores.
                             {apartamento.tipo === 'dúplex' && apartamento.ubicacion === 'cuarto' ? ' Terraza con vista panorámica.' : ''} */}
                         </p>
                     </div>
