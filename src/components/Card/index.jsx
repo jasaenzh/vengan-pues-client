@@ -74,10 +74,12 @@ const Card = () => {
                             <span>{apartamento.secadorCabello >= 1 ? `, secador de cabello` : ``}</span>
                             <span>{apartamento.salaEstar === true ? `, sala` : ``}</span>
                             <span>{apartamento.comedor >= 1 ? `, comedor` : ``}</span>
-
+                            <span>{apartamento.sofaCama >= 1 ? `, sofá cama` : ``}</span>
+                            <span>{apartamento.televisor >= 1 ? `, televisor` : ``}</span>
+                            <span>{apartamento.internet === true ? `, internet` : ``}</span>
 
                             {/* 
-                              comedor, sofá cama, televisor, internet, cocina equipada con nevera, lavadora, microondas, cafetera, licuadora, tostador de pan, olla presión, olla arrocera con vaporera, sandwichera, cámaras de seguridad en exteriores.
+                            , cocina equipada con nevera, lavadora, microondas, cafetera, licuadora, tostador de pan, olla presión, olla arrocera con vaporera, sandwichera, cámaras de seguridad en exteriores.
                             {apartamento.tipo === 'dúplex' && apartamento.ubicacion === 'cuarto' ? ' Terraza con vista panorámica.' : ''} */}
                         </p>
                     </div>
