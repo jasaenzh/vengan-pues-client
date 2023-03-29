@@ -9,7 +9,6 @@ const Banner = () => {
         from: { opacity: 0 },
     });
 
-    // Esto es un comentario
     return (
         <animated.div className="bg-info" style={fadeIn}>
             <p>Quieres o necesitas viajar a Medellín, hospédate con nosotros...</p>
@@ -27,3 +26,4 @@ const Banner = () => {
 };
 
 export default Banner;
+
