@@ -1,16 +1,11 @@
-import React, { useState } from 'react';
-import { useSpring, animated } from 'react-spring';
+import React from 'react';
 
-const Banner = () => {
-    const [show, setShow] = useState(false);
-
-    const fadeIn = useSpring({
-        opacity: show ? 1 : 0,
-        from: { opacity: 0 },
-    });
-
+const Banner = ({ onClose }) => {
     return (
-        <animated.div className="bg-info" style={fadeIn}>
+        <div className="bg-info p-3 rounded fade-in">
+            <button type="button" className="close" onClick={onClose}>
+                <span>&times;</span>
+            </button>
             <p>Quieres o necesitas viajar a Medellín, hospédate con nosotros...</p>
             <p>
                 Ofrecemos hospedaje en apartamentos cómodos, seguros y tranquilos, con
@@ -21,9 +16,10 @@ const Banner = () => {
                 universitario ITM, con fácil acceso al servicio público, supermercados,
                 centros comerciales y sitios turísticos
             </p>
-        </animated.div>
+        </div>
     );
 };
 
 export default Banner;
+
 
