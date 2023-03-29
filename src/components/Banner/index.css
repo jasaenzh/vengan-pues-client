@@ -1,0 +1,21 @@
+.animation {
+    position: relative;
+    animation: animation 2s ease-out;
+}
+
+#slide-in {
+    text-align: center;
+    color: black;
+}
+
+@keyframes animation {
+    0% {
+        opacity: 0;
+        left: -700px;
+    }
+
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}

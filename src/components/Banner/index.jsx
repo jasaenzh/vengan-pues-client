@@ -1,4 +1,5 @@
 import React from 'react'
+import "./index.css"
 
 const Banner = () => {
     return (
@@ -6,6 +7,9 @@ const Banner = () => {
             <p>
                 Quieres o necesitas viajar a Medellín, hospédate con nosotros...
             </p>
+            <h4 id="slide-in" class="animation">
+                Quieres o necesitas viajar a Medellín, hospédate con nosotros...
+            </h4>
             <p>
                 Ofrecemos hospedaje en apartamentos cómodos, seguros y tranquilos, con
                 ubicación estratégica cerca al Hospital Pablo Tobón Uribe, Clínica
