@@ -1,26 +1,23 @@
-import React from 'react'
-import NavBar from '../components/Navbar'
-import Cards from '../components/Cards'
-
-
+import React from 'react';
+import NavBar from '../components/Navbar';
+import Cards from '../components/Cards';
 
 const Home = () => {
     return (
-        <>
-            <NavBar className="fixed-top" />
+        <div className="Home">
+            <NavBar />
 
-            <div className="container mb-5">
+            <main className="container my-5">
                 <Cards />
-            </div>
+            </main>
 
-            <footer className="bg-dark text-light py-3 ">
+            <footer className="bg-dark text-light py-3">
                 <div className="container text-center">
                     &copy; 2023 creado por Jhony Saenz
                 </div>
             </footer>
-        </>
+        </div>
+    );
+};
 
-    )
-}
-
-export default Home
+export default Home;
