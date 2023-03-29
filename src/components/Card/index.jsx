@@ -87,11 +87,7 @@ const Card = () => {
                             <span>{apartamento.ollaArrocera === true ? `, olla arrocera con vaporera` : ``}</span>
                             <span>{apartamento.sanduchera === true ? `, sandwichera` : ``}</span>
                             <span>{apartamento.camaraSeguridad === true ? `, cámaras de seguridad en exteriores` : ``}</span>
-
-
-                            {/* 
-                        , .
-                            {apartamento.tipo === 'dúplex' && apartamento.ubicacion === 'cuarto' ? ' Terraza con vista panorámica.' : ''} */}
+                            <span>{apartamento.terrazaVista === true ? `, terraza con vista panorámica` : ``}</span>
                         </p>
                     </div>
                 );
