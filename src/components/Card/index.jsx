@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getApartamentos } from '../../redux/actions';
 import imagenEjemplo1 from "../../assets/apt101/07112019-Jaime_Navarro_6319.jpg"
+import "./index.css";
 
 const Card = () => {
     const dispatch = useDispatch();
