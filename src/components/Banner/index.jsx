@@ -3,10 +3,7 @@ import "./index.css"
 
 const Banner = () => {
     return (
-        <div className=' bg-info'>
-            <p>
-                Quieres o necesitas viajar a Medellín, hospédate con nosotros...
-            </p>
+        <div className=' rounded-2 bg-info'>
             <h4 id="slide-in" class="animation">
                 Quieres o necesitas viajar a Medellín, hospédate con nosotros...
             </h4>
