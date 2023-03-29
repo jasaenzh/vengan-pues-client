@@ -70,8 +70,8 @@ const Card = () => {
                                 },
                             </span>
 
-                            <span> {apartamento.banos} baño{apartamento.banos === 1 ? '' : 's'} {apartamento.aguaCaliente === true ? ` con agua caliente` : ``},</span>
-                            <span></span>
+                            <span> {apartamento.banos} baño{apartamento.banos === 1 ? '' : 's'} {apartamento.aguaCaliente === true ? ` con agua caliente` : ``}</span>
+                            <span>, {apartamento.secadorCabello >= 1 ? `secador de cabello` : ``}</span>
 
 
                             {/* 
