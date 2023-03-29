@@ -18,7 +18,7 @@ const Card = () => {
                 let camasDoblesLabel = apartamento.camasDobles === 1 ? 'cama doble' : 'camas dobles';
                 let camasSencillasLabel = apartamento.camasSencillas === 1 ? 'cama sencilla' : 'camas sencillas';
                 return (
-                    <div key={index} className='bg-info my-3 mx-auto col-sm-6 col-lg-4' >
+                    <div key={index} className='bg-info my-3 mx-auto col-sm-4 col-lg-2' >
                         <img src={imagenEjemplo1} alt='Imagen1' className='img-fluid w-100 h-auto' />
                         <h3> Apartamento {apartamento.numeroApartamento}</h3>
                         <p>
