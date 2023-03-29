@@ -12,7 +12,7 @@ const Card = () => {
     }, [dispatch]);
 
     return (
-        <div className='d-flex justify-content-between m-3 w-100 bg-light text-center gap-3'>
+        <div className='d-flex flex-column justify-content-between m-3 w-100 bg-light text-center gap-3'>
             {apartamentosProps?.map((apartamento, index) => {
                 let habitacionesLabel = apartamento.habitaciones === 1 ? 'habitación' : 'habitaciones';
                 let camasDoblesLabel = apartamento.camasDobles === 1 ? 'cama doble' : 'camas dobles';
