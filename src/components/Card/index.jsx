@@ -62,7 +62,7 @@ const Card = () => {
                         //     </p>
                         // </div>
 
-                        <div key={index} className='card cardDiv col-lg-6 col-md-12 m-2'>
+                        <div key={index} className='card col-lg-6 col-md-12 m-2'>
                             <img className='card-img-top img-fluid w-100 h-auto' src={imagenEjemplo1} alt='Imagen1'></img>
                             <div className='card-body'>
                                 <p className='card-text'> Apartamento {apartamento.numeroApartamento}</p>
