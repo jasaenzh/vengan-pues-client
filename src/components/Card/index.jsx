@@ -18,14 +18,14 @@ const Card = () => {
             <div className='row'>
 
                 {apartamentosProps?.map((apartamento, index) => {
-                    let habitacionesLabel = apartamento.habitaciones === 1 ? 'habitación' : 'habitaciones';
-                    let camasDoblesLabel = apartamento.camasDobles === 1 ? 'cama doble' : 'camas dobles';
-                    let camasSencillasLabel = apartamento.camasSencillas === 1 ? 'cama sencilla' : 'camas sencillas';
+                    // let habitacionesLabel = apartamento.habitaciones === 1 ? 'habitación' : 'habitaciones';
+                    // let camasDoblesLabel = apartamento.camasDobles === 1 ? 'cama doble' : 'camas dobles';
+                    // let camasSencillasLabel = apartamento.camasSencillas === 1 ? 'cama sencilla' : 'camas sencillas';
                     return (
                         <div div key={index} className='col-lg-6 col-md-12' >
                             <img src={imagenEjemplo1} alt='Imagen1' className='img-fluid w-100 h-auto' />
                             <h3> Apartamento {apartamento.numeroApartamento}</h3>
-                            <p>
+                            {/* <p>
                                 <span>{apartamento.duplex === true ? 'Dúplex, ' : ''}</span>
                                 <span>Ubicado en el {apartamento.ubicacion}, </span>
                                 <span>cuenta con {apartamento.habitaciones} {habitacionesLabel}</span>
@@ -59,7 +59,7 @@ const Card = () => {
                                 <span>{apartamento.sanduchera === true ? `, sandwichera` : ``}</span>
                                 <span>{apartamento.camaraSeguridad === true ? `, cámaras de seguridad en exteriores` : ``}</span>
                                 <span>{apartamento.terrazaVista === true ? `, terraza con vista panorámica` : ``}</span>
-                            </p>
+                            </p> */}
                         </div>
                     );
                 })}
