@@ -1,4 +1,4 @@
-import { AUMENTAR_CONTADOR, GET_APARTAMENTOS } from "./actions";
+import { AUMENTAR_CONTADOR, GET_APARTAMENTOS, GET_DETAIL_APARTAMENTO } from "./actions";
 
 
 const initialState = {
@@ -21,6 +21,12 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 apartamentos: action.payload.docs
+            }
+
+        case GET_DETAIL_APARTAMENTO:
+            return {
+                ...state,
+                apartamento: action.payload
             }
 
         default:

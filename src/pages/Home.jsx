@@ -1,11 +1,11 @@
 import React from 'react';
-import NavBar from '../components/Navbar';
+
 import Cards from '../components/Cards';
 
 const Home = () => {
     return (
         <div className="Home">
-            <NavBar />
+
 
             <main className="container my-5">
                 <Cards />

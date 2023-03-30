@@ -1,35 +1,65 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getApartamentos } from '../../redux/actions';
-import imagenEjemplo1 from "../../assets/apt101/07112019-Jaime_Navarro_6319.jpg"
-import "./index.css";
-import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { getApartamentoById } from '../../redux/actions';
+import { Container, Row, Col, Carousel, Button } from 'react-bootstrap';
 
-const Card = () => {
+const DetalleApartamento = () => {
+    const { _id } = useParams();
     const dispatch = useDispatch();
-    const apartamentosProps = useSelector((state) => state.apartamentos);
 
     useEffect(() => {
-        dispatch(getApartamentos());
-    }, [dispatch]);
+        console.log(getApartamentoById(_id))
+        dispatch(getApartamentoById(_id));
+    }, [dispatch, _id]);
+
+    const apartamento = useSelector((state) => state.apartamento);
+
+    let habitacionesLabel = apartamento.habitaciones === 1 ? 'habitación' : 'habitaciones';
+    let camasDoblesLabel = apartamento.camasDobles === 1 ? 'cama doble' : 'camas dobles';
+    let camasSencillasLabel = apartamento.camasSencillas === 1 ? 'cama sencilla' : 'camas sencillas';
+
+
 
     return (
 
-        <div className='container'>
-            <div className='row'>
 
-                {apartamentosProps?.map((apartamento, index) => {
-                    let habitacionesLabel = apartamento.habitaciones === 1 ? 'habitación' : 'habitaciones';
-                    let camasDoblesLabel = apartamento.camasDobles === 1 ? 'cama doble' : 'camas dobles';
-                    let camasSencillasLabel = apartamento.camasSencillas === 1 ? 'cama sencilla' : 'camas sencillas';
-                    return (
-                        <div div key={index} className='col-lg-6 col-md-12' >
-                            <img src={imagenEjemplo1} alt='Imagen1' className='img-fluid w-100 h-auto' />
-                            <Link to={`/apartamentos/${apartamento._id}`}>
-                                <h3> Apartamento {apartamento.numeroApartamento}</h3>
-                            </Link>
+        <Container className="my-5 full-height">
+            <Row>
+                <Col md={6}>
+                    {/* Aquí podrías mostrar las fotos del apartamento */}
+                    <Carousel >
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src="https://via.placeholder.com/800x400.png?text=First+slide"
+                                alt="First slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src="https://via.placeholder.com/800x400.png?text=Second+slide"
+                                alt="Second slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src="https://via.placeholder.com/800x400.png?text=Third+slide"
+                                alt="Third slide"
+                            />
+                        </Carousel.Item>
+                    </Carousel>
+                </Col>
+                <Col md={6}>
+                    {/* Aquí podrías mostrar el resumen del apartamento */}
+                    <div className="card" >
+                        <div className="card-body">
+                            <h5 className="card-title">Apartamento {apartamento.numeroApartamento}</h5>
+                            <h6 className="card-subtitle mb-2 text-muted">Precio por dia: {apartamento.precio}</h6>
 
-                            <p>
+                            <p className="card-text">
                                 <span>{apartamento.duplex === true ? 'Dúplex, ' : ''}</span>
                                 <span>Ubicado en el {apartamento.ubicacion}, </span>
                                 <span>cuenta con {apartamento.habitaciones} {habitacionesLabel}</span>
@@ -64,15 +94,14 @@ const Card = () => {
                                 <span>{apartamento.camaraSeguridad === true ? `, cámaras de seguridad en exteriores` : ``}</span>
                                 <span>{apartamento.terrazaVista === true ? `, terraza con vista panorámica` : ``}</span>
                             </p>
+                            <Button variant="primary">Reservar ahora</Button>
+
                         </div>
-                    );
-                })}
-
-            </div>
-        </div>
-
-
+                    </div>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 
-export default Card;
+export default DetalleApartamento;
