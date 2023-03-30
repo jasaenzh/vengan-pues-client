@@ -8,7 +8,8 @@ export const aumentarContador = () => {
 
 export const getApartamentos = () => {
     return function (dispatch) {
-        fetch("https://vengan-pues.onrender.com/api/apartamentos")
+        const apiURL = "http://localhost:3001/api/apartamentos" ? "http://localhost:3001/api/apartamentos" : "https://vengan-pues.onrender.com/api/apartamentos"
+        fetch(apiURL)
             .then((response) => response.json())
             .then((data) => dispatch({
                 type: GET_APARTAMENTOS,
