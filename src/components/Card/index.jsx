@@ -22,9 +22,22 @@ const Card = () => {
                     // let camasDoblesLabel = apartamento.camasDobles === 1 ? 'cama doble' : 'camas dobles';
                     // let camasSencillasLabel = apartamento.camasSencillas === 1 ? 'cama sencilla' : 'camas sencillas';
                     return (
-                        <div div key={index} className='col-lg-6 col-md-12' >
-                            <img src={imagenEjemplo1} alt='Imagen1' className='img-fluid w-100 h-auto' />
-                            <h3> Apartamento {apartamento.numeroApartamento}</h3>
+                        <div div key={index} className='col-lg-6 col-md-12 m-2' >
+
+                            <div className='card cardDiv'>
+
+                                <img className='card-img-top img-fluid w-100 h-auto' src={imagenEjemplo1} alt='Imagen1'></img>
+                                <div className='card-body'>
+
+                                    <p className='card-text'> Apartamento {apartamento.numeroApartamento}</p>
+
+                                </div>
+
+                            </div>
+
+
+                            {/* <img src={imagenEjemplo1} alt='Imagen1' className='img-fluid w-100 h-auto' />
+                            <h3> Apartamento {apartamento.numeroApartamento}</h3> */}
                             {/* <p>
                                 <span>{apartamento.duplex === true ? 'Dúplex, ' : ''}</span>
                                 <span>Ubicado en el {apartamento.ubicacion}, </span>
