@@ -9,8 +9,10 @@ export const aumentarContador = () => {
 
 export const getApartamentos = () => {
     return function (dispatch) {
-        const apiURL = "http://localhost:3001/api/apartamentos" ? "http://localhost:3001/api/apartamentos" : "https://vengan-pues.onrender.com/api/apartamentos"
-        fetch(apiURL)
+        // const apiURLocal = "http://localhost:3001/api/apartamentos"
+        const apiURLWeb = "https://vengan-pues.onrender.com/api/apartamentos"
+
+        fetch(apiURLWeb)
             .then((response) => response.json())
             .then((data) => dispatch({
                 type: GET_APARTAMENTOS,
@@ -25,9 +27,10 @@ export const getApartamentos = () => {
 export const getApartamentoById = (id) => {
 
     return function (dispatch) {
-        const apiURLById = `http://localhost:3001/api/apartamentos/${id}` ? `http://localhost:3001/api/apartamentos/${id}` : `https://vengan-pues.onrender.com/api/apartamentos/${id}`
+        // const apiURLByIdLocal = `http://localhost:3001/api/apartamentos/${id}`
+        const apiURLByIWeb = `https://vengan-pues.onrender.com/api/apartamentos/${id}`
 
-        fetch(apiURLById)
+        fetch(apiURLByIWeb)
             .then((response) => response.json())
             .then((data) => dispatch({
                 type: GET_DETAIL_APARTAMENTO,
