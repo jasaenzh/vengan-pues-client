@@ -21,7 +21,7 @@ const NavBar = () => {
             <Navbar.Brand href="/">
                 <img className='custom-navbar mx-4' src={VenganPues} alt="VenganPues" /> <span className='tiltuloVenganPues'>Vengan Pues...</span>
             </Navbar.Brand>
-            <Navbar.Toggle className='mx-4'>
+            <Navbar.Toggle className=' mx-lg-4'>
                 <span className='navbar-toggler-icon'></span>
             </Navbar.Toggle>
             <Navbar.Collapse className='justify-content-end'>
