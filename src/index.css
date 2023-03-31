@@ -5,7 +5,31 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-image: url("../src/assets/fondo_pantalla.jpeg"); */
+  background-attachment: fixed;
+  animation: rotate 10s infinite;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
 }
+
+/* @keyframes rotate {
+  0% {
+    background-image: url('../src/assets/fondo_pantalla.jpeg');
+  }
+
+  33% {
+    background-image: url('../src/assets/fondo_pantalla_2.jpeg');
+  }
+
+  66% {
+    background-image: url('../src/assets/fondo_pantalla.jpeg');
+  }
+
+  100% {
+    background-image: url('../src/assets/fondo_pantalla_2.jpeg');
+  }
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

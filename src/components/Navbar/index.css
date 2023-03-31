@@ -2,13 +2,17 @@
     color: rgb(124, 56, 14);
 }
 
+.NavBar-Container {
+    background-color: #FFFF;
+}
+
 .custom-navbar {
     height: 50px;
     /* Cambia este valor por el que tenga tu Navbar */
 }
 
 .custom-navbar img {
-    height: 100%;
+    height: 50%;
     /* La imagen ocupará toda la altura del Navbar */
 }
 

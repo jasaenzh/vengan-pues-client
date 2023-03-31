@@ -13,7 +13,13 @@ function App() {
         <Route exact path='/' Component={Home} />
         <Route exact path='/apartamentos/:_id' Component={DetallelApartamento} />
       </Routes>
+      <footer className="bg-dark text-light py-3">
+        <div className="container text-center">
+          &copy; 2023 creado por Jhony Saenz
+        </div>
+      </footer>
     </div>
+
   );
 }
 

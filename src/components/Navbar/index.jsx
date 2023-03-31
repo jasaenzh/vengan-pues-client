@@ -17,20 +17,20 @@ const NavBar = () => {
     ));
 
     return (
-        <Navbar className='NavBar-Container mx-5 mt-0 g-lg-5' expand='md'>
+        <Navbar className='NavBar-Container mx-5 mt-0 g-lg-5 rounded-4' expand='md'>
             <Navbar.Brand href="/">
-                <img className='custom-navbar' src={VenganPues} alt="VenganPues" /> <span className='tiltuloVenganPues'>Vengan Pues...</span>
+                <img className='custom-navbar mx-4' src={VenganPues} alt="VenganPues" /> <span className='tiltuloVenganPues'>Vengan Pues...</span>
             </Navbar.Brand>
-            <Navbar.Toggle>
+            <Navbar.Toggle className='mx-4'>
                 <span className='navbar-toggler-icon'></span>
             </Navbar.Toggle>
             <Navbar.Collapse className='justify-content-end'>
-                <Nav className='d-flex gap-4'>
+                <Nav className='d-flex gap-4 align-items-sm-center'>
                     <NavDropdown title="Apartamentos" id="basic-nav-dropdown">
                         {apartamentosDropdown}
                     </NavDropdown>
                     <Nav.Link href="#"><span className='menu-letras'>Tarifas</span></Nav.Link>
-                    <Nav.Link href="#"><span className='menu-letras'>Realizar pago</span></Nav.Link>
+                    <Nav.Link href="#"><span className='menu-letras mx-lg-4'>Realizar pago</span></Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
