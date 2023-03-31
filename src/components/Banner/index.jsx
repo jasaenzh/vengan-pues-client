@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { ArrowRightCircle } from 'react-bootstrap-icons';
+// import { ArrowRightCircle } from 'react-bootstrap-icons';
 import ChivaMedellin from '../../assets/logochivas-150x150.png';
 import './index.css';
 
@@ -11,11 +11,11 @@ const Banner = () => {
         'al Hospital Pablo Tobón Uribe',
         'a la Clínica Universitaria Bolivariana',
         'a la facultad de ciencias agrarias de la Universidad de Antioquia',
-        'al tecnológico de Antioquia', 'al instituto universitario ITM,'
+        'al tecnológico de Antioquia', 'al instituto universitario ITM'
     ];
     const [text, setText] = useState('');
-    const [delta, setDelta] = useState(300 - Math.random() * 100);
-    const period = 2000;
+    const [delta, setDelta] = useState(100 - Math.random() * 100);
+    const period = 1000;
 
     useEffect(() => {
         let ticker = setInterval(() => {
@@ -36,7 +36,7 @@ const Banner = () => {
         setText(updatedText);
 
         if (isDeleting) {
-            setDelta((prevDelta) => prevDelta / 2);
+            setDelta((prevDelta) => prevDelta / 3);
         }
 
         if (!isDeleting && updatedText === fullText) {
@@ -45,7 +45,7 @@ const Banner = () => {
         } else if (isDeleting && updatedText === '') {
             setIsDeleting(false);
             setLoopNum(loopNum + 1);
-            setDelta(500);
+            setDelta(100);
         }
     };
 
@@ -54,15 +54,16 @@ const Banner = () => {
             <Container>
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
-                        <span className="tagline">Quieres o necesitas viajar a Medellín, hospédate con nosotros...</span>
-                        <h4>{`Ofrecemos hospedaje en apartamentos cómodos, seguros y tranquilos.`}</h4>
-                        <span> con ubicación estratégica cerca </span><span className="wrap">{text}</span>
+                        {/* <span className="tagline">Quieres o necesitas viajar a Medellín, hospédate con nosotros...</span> */}
+                        <h4>Quieres o necesitas viajar a Medellín, hospédate con nosotros...</h4>
+                        <h5>{`Ofrecemos hospedaje en apartamentos cómodos, seguros y tranquilos.`}</h5>
+                        <span>Con ubicación estratégica cerca </span><span className="wrap">{text}</span>
                         <p>
                             Con fácil acceso al servicio público, supermercados, centros comerciales y sitios turísticos
                         </p>
-                        <button onClick={() => console.log('conectado')}>
+                        {/* <button onClick={() => console.log('conectado')}>
                             Vamos a conectarnos <ArrowRightCircle size={25} />
-                        </button>
+                        </button> */}
                     </Col>
 
                     <Col xs={12} md={6} xl={5}>

@@ -44,7 +44,7 @@
 
 .banner h4 {
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0.8px;
     line-height: 1;
     margin-bottom: 20px;
@@ -52,8 +52,10 @@
 }
 
 .banner p {
+    padding-top: 0.8rem;
     color: #B8B8B8;
-    font-size: 18px;
+    color: black;
+    font-size: 14px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
     width: 96%;

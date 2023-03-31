@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { getApartamentos } from '../../redux/actions';
-import imagenEjemplo1 from "../../assets/apt101/07112019-Jaime_Navarro_6319.jpg"
-import imagenEjemplo2 from "../../assets/apt101/SLA_3734.jpg"
-import imagenEjemplo3 from "../../assets/apt101/departamentos-de-lujo-2.jpeg"
 import "./index.css";
-import { Link } from 'react-router-dom';
-import { Carousel } from 'react-bootstrap';
+// import { Link } from 'react-router-dom';
+// import { Carousel } from 'react-bootstrap';// import imagenEjemplo1 from "../../assets/apt101/07112019-Jaime_Navarro_6319.jpg"
+// import imagenEjemplo2 from "../../assets/apt101/SLA_3734.jpg"
+// import imagenEjemplo3 from "../../assets/apt101/departamentos-de-lujo-2.jpeg"
 
 const Card = () => {
     const dispatch = useDispatch();
-    const apartamentosProps = useSelector((state) => state.apartamentos);
+    // const apartamentosProps = useSelector((state) => state.apartamentos);
 
     useEffect(() => {
         dispatch(getApartamentos());
