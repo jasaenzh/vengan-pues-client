@@ -17,7 +17,7 @@ const NavBar = () => {
     ));
 
     return (
-        <Navbar className='NavBar-Container mx-5 mt-0 g-lg-5 rounded-4' expand='md'>
+        <Navbar className='NavBar-Container mx-5 m-0 g-lg-5 rounded-4' expand='md'>
             <Navbar.Brand href="/">
                 <img className='custom-navbar mx-4' src={VenganPues} alt="VenganPues" /> <span className='tiltuloVenganPues'>Vengan Pues...</span>
             </Navbar.Brand>

@@ -9,14 +9,14 @@ import FooterMain from './components/Footer';
 function App() {
   return (
     <div className=" mt-1">
-      <NavBar />
-      <main>
+      <NavBar className="css-navBar" />
+      <main className='css-main'>
         <Routes>
           <Route exact path='/' Component={Home} />
           <Route exact path='/apartamentos/:_id' Component={DetallelApartamento} />
         </Routes>
       </main>
-      <FooterMain />
+      <FooterMain className='css-footer' />
     </div>
 
   );
