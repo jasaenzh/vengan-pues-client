@@ -7,7 +7,12 @@ import './index.css';
 const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ['Hospital Pablo Tobón Uribe', 'Clínica Universitaria Bolivariana', 'facultad de ciencias agrarias de la Universidad de Antioquia', 'tecnológico de Antioquia', 'instituto universitario ITM,'];
+    const toRotate = [
+        'al Hospital Pablo Tobón Uribe',
+        'a la Clínica Universitaria Bolivariana',
+        'a la facultad de ciencias agrarias de la Universidad de Antioquia',
+        'al tecnológico de Antioquia', 'al instituto universitario ITM,'
+    ];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const period = 2000;
@@ -51,9 +56,9 @@ const Banner = () => {
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline">Quieres o necesitas viajar a Medellín, hospédate con nosotros...</span>
                         <h4>{`Ofrecemos hospedaje en apartamentos cómodos, seguros y tranquilos.`}</h4>
-                        <span> con ubicación estratégica cerca al </span><span className="wrap">{text}</span>
+                        <span> con ubicación estratégica cerca </span><span className="wrap">{text}</span>
                         <p>
-                            con fácil acceso al servicio público, supermercados, centros comerciales y sitios turísticos
+                            Con fácil acceso al servicio público, supermercados, centros comerciales y sitios turísticos
                         </p>
                         <button onClick={() => console.log('conectado')}>
                             Vamos a conectarnos <ArrowRightCircle size={25} />

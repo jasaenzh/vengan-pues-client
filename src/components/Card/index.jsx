@@ -18,47 +18,51 @@ const Card = () => {
 
     return (
 
-        <div className='container'>
-            <div className='row justify-content-center'>
+        <div>
 
-                {apartamentosProps?.map((apartamento, index) => {
-
-                    return (
-                        <div key={index} className='card col-lg-5 col-md-12 m-3' >
-                            <Carousel >
-                                <Carousel.Item>
-                                    <img
-                                        className="d-block w-100"
-                                        src={imagenEjemplo1}
-                                        alt="First slide"
-                                    />
-                                </Carousel.Item>
-                                <Carousel.Item>
-                                    <img
-                                        className="d-block w-100"
-                                        src={imagenEjemplo2}
-                                        alt="Second slide"
-                                    />
-                                </Carousel.Item>
-                                <Carousel.Item>
-                                    <img
-                                        className="d-block w-100"
-                                        src={imagenEjemplo3}
-                                        alt="Third slide"
-                                    />
-                                </Carousel.Item>
-                            </Carousel>
-                            {/* <img src={imagenEjemplo1} alt='Imagen1' className='card-img-top img-fluid  h-auto' /> */}
-                            <Link className=' text-center' to={`/apartamentos/${apartamento._id}`}>
-                                <p className="card-text"> Apartamento {apartamento.numeroApartamento}</p>
-                            </Link>
-                        </div>
-
-                    );
-                })}
-
-            </div>
         </div>
+
+        // <div className='container'>
+        //     <div className='row justify-content-center'>
+
+        //         {apartamentosProps?.map((apartamento, index) => {
+
+        //             return (
+        //                 <div key={index} className='card col-lg-5 col-md-12 m-3' >
+        //                     <Carousel >
+        //                         <Carousel.Item>
+        //                             <img
+        //                                 className="d-block w-100"
+        //                                 src={imagenEjemplo1}
+        //                                 alt="First slide"
+        //                             />
+        //                         </Carousel.Item>
+        //                         <Carousel.Item>
+        //                             <img
+        //                                 className="d-block w-100"
+        //                                 src={imagenEjemplo2}
+        //                                 alt="Second slide"
+        //                             />
+        //                         </Carousel.Item>
+        //                         <Carousel.Item>
+        //                             <img
+        //                                 className="d-block w-100"
+        //                                 src={imagenEjemplo3}
+        //                                 alt="Third slide"
+        //                             />
+        //                         </Carousel.Item>
+        //                     </Carousel>
+        //                     {/* <img src={imagenEjemplo1} alt='Imagen1' className='card-img-top img-fluid  h-auto' /> */}
+        //                     <Link className=' text-center' to={`/apartamentos/${apartamento._id}`}>
+        //                         <p className="card-text"> Apartamento {apartamento.numeroApartamento}</p>
+        //                     </Link>
+        //                 </div>
+
+        //             );
+        //         })}
+
+        //     </div>
+        // </div>
 
 
     );
