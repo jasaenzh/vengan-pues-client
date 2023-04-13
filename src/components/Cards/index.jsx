@@ -3,12 +3,11 @@ import Card from '../Card';
 import './index.css';
 import Banner from '../Banner';
 
+
 const Cards = () => {
     return (
-        <div className="d-flex flex-column align-content-center">
-
+        <div className="d-flex">
             <Banner className="container" />
-
             <Card />
         </div>
     );

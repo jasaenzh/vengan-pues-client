@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+// import { Col, Container, Row } from 'react-bootstrap';
 // import { ArrowRightCircle } from 'react-bootstrap-icons';
 import ChivaMedellin from '../../assets/logochivas-150x150.png';
 import './index.css';
@@ -51,26 +51,19 @@ const Banner = () => {
 
     return (
         <section className="banner" id="home">
-            <Container>
-                <Row className="align-items-center">
-                    <Col xs={12} md={6} xl={7}>
-                        {/* <span className="tagline">Quieres o necesitas viajar a Medellín, hospédate con nosotros...</span> */}
-                        <h4>Quieres o necesitas viajar a Medellín, hospédate con nosotros...</h4>
-                        <h5>{`Ofrecemos hospedaje en apartamentos cómodos, seguros y tranquilos.`}</h5>
-                        <span>Con ubicación estratégica cerca </span><span className="wrap">{text}</span>
-                        <p>
-                            Con fácil acceso al servicio público, supermercados, centros comerciales y sitios turísticos
-                        </p>
-                        {/* <button onClick={() => console.log('conectado')}>
-                            Vamos a conectarnos <ArrowRightCircle size={25} />
-                        </button> */}
-                    </Col>
-
-                    <Col xs={12} md={6} xl={5}>
-                        <img src={ChivaMedellin} alt="Imagen3" />
-                    </Col>
-                </Row>
-            </Container>
+            <div className="card card-5">
+                <div className="card__icon"><img src={ChivaMedellin} alt="Imagen3" /></div>
+                <p className="card__exit">※※※※</p>
+                <div className="text">Quieres o necesitas viajar a Medellín, hospédate con nosotros...</div>
+                <div className="text">{`Ofrecemos hospedaje en apartamentos cómodos, seguros y tranquilos.`}</div>
+                <div className="text">
+                    <span>Con ubicación estratégica cerca </span>
+                    <span className="flex-nowrap">{text}</span>
+                </div>
+                <div className="text">
+                    Con fácil acceso al servicio público, supermercados, centros comerciales y sitios turísticos
+                </div>
+            </div>
         </section>
     );
 };
@@ -93,3 +86,24 @@ export default Banner;
         //         supermercados, centros comerciales y sitios turísticos
         //     </p>
         // </div>
+
+        // <Container>
+        //         <Row className="align-items-center">
+        //             <Col xs={12} md={6} xl={7}>
+        //                 {/* <span className="tagline">Quieres o necesitas viajar a Medellín, hospédate con nosotros...</span> */}
+        //                 <h4>Quieres o necesitas viajar a Medellín, hospédate con nosotros...</h4>
+        //                 <h5>{`Ofrecemos hospedaje en apartamentos cómodos, seguros y tranquilos.`}</h5>
+        //                 <span>Con ubicación estratégica cerca </span><span className="wrap">{text}</span>
+        //                 <p>
+        //                     Con fácil acceso al servicio público, supermercados, centros comerciales y sitios turísticos
+        //                 </p>
+        //                 {/* <button onClick={() => console.log('conectado')}>
+        //                     Vamos a conectarnos <ArrowRightCircle size={25} />
+        //                 </button> */}
+        //             </Col>
+
+        //             <Col xs={12} md={6} xl={5}>
+        //                 <img src={ChivaMedellin} alt="Imagen3" />
+        //             </Col>
+        //         </Row>
+        //     </Container>
